@@ -13,4 +13,4 @@ final_product is the file which can be run to observe the stat in action
 ## Explanation of BCA
 
 ### Original goal
-
+The original objective of my statistic was to find a way to somewhat accurately predict the performance of batters. The approach I took to this was to first produce a single base statistic that I would later use in the prediction. I wanted this stat to be unique in that it balances both performance and skill. For the purpose of this assignment, I was thinking of the difference between these two things as performance is how they have done for the teams they have been on and skill is what they can do in terms of raw, batting related skill.
