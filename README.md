@@ -1,5 +1,5 @@
 # Sabermetrics_Final
-## Maxwell Wenzel
+### Maxwell Wenzel
 
 The data folder holds the batter_data.csv file that has all of the data needed for the stat generation file as well as BPC.csv which is the file including the stat and the stats used to compare against it.
 
