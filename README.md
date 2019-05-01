@@ -33,4 +33,11 @@ This stat required the statcast data as it was based on the pitch type of specif
 
 The Fast Balls Hit stat also requires the use of statcast as you need the release speed of each pitch and the outcome of that pitch. This is quite similar to DBH% as it is dealing with batting average in a specific case, however, in this case, it is a bit simpler as you only need to consider pitches above a certain speed. For this value, I chose 95mph as it seemed, from exploring the data, that most pitches are slower than this and only a small fraction are faster. I felt for this reason any ball with a release speed of at least 95mph would be indicative of an unusually fast pitch that would pose a challenge for a hitter. So much the same to DBH% I found the total number of times a pitch to a player in a year was above this speed and then the number of times this resulted in a hit. The final stat was then the ratio between those two numbers.
 
+#### BCA
+
+Arguably the most complex of the skill-based stats is Ball Call Ability as it based on a more in-depth part of the statcast data. The core of this stat is a way to represent how good a batter is at recognizing a pitch as outside of the strike zone. This is a difficult thing to do and is a crucial skill needed in becoming a great batter. For this, I needed the zone column from stat cast. The zone value is a number that represents roughly where the ball passed over the home plate. 
+
+![alt text](https://baseballsavant.mlb.com/sections/statcast_search_v2/images/zones.png "Image From BaseballSavant")
+
+As you can see in the image, the values 11, 12, 13, and 14 represent areas outside of the strike zone and should, therefore, it would be in the batters best interest to not swing at them. To produce this stat I took all the times where the ball was pitched to a batter in one of these zones and then I found the subset of those where the batter got a ball by not swinging. The ratio between the count of these is the stat and it represents how often a batter correctly does not swing at a pitch that would result in a ball. 
 
