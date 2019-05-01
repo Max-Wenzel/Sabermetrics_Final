@@ -1,6 +1,8 @@
 # Sabermetrics_Final
 ### Maxwell Wenzel
 
+[Here is a video demo/explanation of my stat](https://youtu.be/fIRL56sfnII)
+
 The data folder holds the batter_data.csv file that has all of the data needed for the stat generation file as well as BPC.csv which is the file including the stat and the stats used to compare against it.
 
 The data generation file is not meant to be run as it is simply to show the code I used to extract the batter_data stats from both the Lahman and statcast data sets.
