@@ -61,4 +61,10 @@ The way I combined these separate pieces together was rather simple, I just adde
 
 ### Finding BPC from bpcsum and The Great Pivot
 
+I initially planned for BPC to be used for prediction but my hopes for that quickly faded. Upon using the correlation of bpcsum over the first four years to predict the fifth I found some really bad results. No matter how I tweaked the parameters the best I could get from a binary prediction of if a person’s performance will increase or decrease was barely above fifty percent. 
 
+So I decided to see what the results were from looking at the top players ranked by bpcsum and found all the players considered to be the best batters for their year were at the top, I also tried to see how it correlated to some stats like Runs, BA, and BABIP and I found there was a pretty high positive correlation for all. This led me to pivot to use bpcsum just as what it was created as: a simple to understand stat that can be used to see how a person performance as changed over time and how it compares from person to person. 
+
+#### Value of Using BPC for Evaluation
+
+While it may just be another stat measuring performance. I think BPC is able to stand out among the crowd by providing a unique combination of skill and performance. There are many stats that are used to compare players, but none of them I believe are able to accurately compare the player as a whole. This stat differs in that it provides a single number that encompasses everything from how often the batter gets runs for their team to how good they are at making swinging decisions. By being a combination of several disconnected stats, you can essentially black box the whole thing when using it for seeing a players trend over time or comparing players. It may not be able to definitively say one player performed better than another, but it can give a person a very good of idea of how several batters stack up. This was, after all, my original goal: be able to in one simple stat get a quick idea of how one batter compares to another and see how they’ve changed over time. This is exactly the sort of stat I wished I had back when we were choosing our fantasy teams. 
