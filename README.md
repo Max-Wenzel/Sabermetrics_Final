@@ -17,4 +17,13 @@ The original objective of my statistic was to find a way to somewhat accurately 
 
 ### Creating BPsum: Batter Performance Summary
 
+As I mentioned above the first step of creating this statistic that would combine both performance and skill. I will start with how I developed the skill-based statistics as they are the ones that took the most effort to produce as I do not believe there are many pre-existing stats that properly encapsulate the concepts I was trying for when referring to skill.
+
+I settled on creating three stats that I felt represented and conveyed three very important skills for batters. The first of these being DPH% which is Difficult Pitches Hit percentage, this was a stat that is essentially a batting average for only the pitches that are particularly difficult to hit such as pitches that tend to break a lot. I hoped to capture a batters skill and ability to deal with pitches that move in an unpredictable way and still manage to hit them as a player that is able to do this is likely to contribute more to their team.
+
+The next stat that I created was FBH% which is Fast Balls Hit%, which is very similar to the previous stat in that it is batting average but only on balls that have a very high release velocity making them a more challenging hit.  A batter who can hit very fast pitches shows that they have the skill to go up against a pitcher who is very good at throwing fast pitches and not be too hindered by this additional challenge. 
+
+The final stat that I created was BCA or Ball Call Ability. This I believe is the most indicative of a highly skilled batter as it is essentially a representation of how well a batter can recognize a pitch as one that would be called as a ball. A batter who is good at this is much less likely to strike out and is more likely to get walks which are both good features to have with a batter
+
+#### DPH%
 
