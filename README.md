@@ -5,7 +5,7 @@ The data folder holds the batter_data.csv file that has all of the data needed f
 
 The data generation file is not meant to be run as it is simply to show the code I used to extract the batter_data stats from both the Lahman and statcast data sets.
 
-Sabermetrics Stat Creation file is the main file that I used to develop the stat.
+The stat_creation file is the main file that I used to develop the stat.
 
 final_product is the file which can be run to observe the stat in action 
 
@@ -40,8 +40,25 @@ Arguably the most complex of the skill-based stats is Ball Call Ability as it ba
 
 As you can see in the image, the values 11, 12, 13, and 14 represent areas outside of the strike zone and should, therefore, it would be in the batters best interest to not swing at them. To produce this stat I took all the times where the ball was pitched to a batter in one of these zones and then I found the subset of those where the batter got a ball by not swinging. The ratio between the count of these is the stat and it represents how often a batter correctly does not swing at a pitch that would result in a ball. 
 
+#### The performance based components
+
+For the components meant to measure the performance of a batter, I used pre-existing stats that I believe are a simple and accurate summary of how a batter performs.
+
+The first of these is Runs Batted In per At Bat, this is exactly what it sounds like as it measures how many runs a player bats in on average when they go up to bat. This is calculated by dividing a player’s RBI by their AB. I feel that this gives a good measure of how much a batter contributes to their team normalized by how often they go up to bat. This is essentially a fair way to compare how many runs players score, or in this case comparing a player from year to year. 
+
+The second statistic that I used was OPS. I chose this as it combines firstly OBP or On Base Percentage which is reflective of how well a batter can get on base. It also combines SLG or slugging percentage which is just a batting average that has been weighted to value better hits more. Both of which I believe are very indicative of performance so it works nicely that they can fit together well by just summing them
+
+
 #### Collecting Data
 
 The first part of the data collection was quite easy as it was just dealing with Lahman data. All I had to do was filter out only the years I needed and then only the players that had data present in all years. I did this as I wanted to guarantee that there would be enough data to predict for each player. I also had to do some minor processing in order to combine rows in the cases where one player played for multiple teams in a season. I also only used players who had at least twelve hundred at-bats across the five years as that seemed to make sure that each player played a good amount in each of the five years.
 
 The much more challenging portion of the data collection was in the statcast data which was excruciating in two different ways. First I decided that I should download all of the statcast data I would need first as it takes a very long time to download it each time even just for a few months. That way I would be able to test things out and not need to redownload the data each time I ran all of my code. I did this by breaking each of the five years into chunks and then downloading each one until I had all five years saved as CSVs. Another difficulty with the statcast data presented itself when querying it as I had to calculate each of the three stats for all players across all fifteen files which in total takes quite a long time. 
+
+#### Combining the pieces
+
+The way I combined these separate pieces together was rather simple, I just added all of the previous components. I felt this was sufficient as all of the components have a value that was around the same range and I didn’t think any one of these components was more important than another. I did encounter one small problem at this point: something seemed to have gone wrong in the calculation of DPH% as it was in several instances throughout the data was larger than one. This shouldn’t be possible as the numerator is the length of a subset of the denominator. Even after lots of checking for bugs, I could not find the source of this problem so I, unfortunately, had to leave it out of the final stat.
+
+### Finding BPC from bpcsum and The Great Pivot
+
+
